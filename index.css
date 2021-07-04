@@ -1,0 +1,128 @@
+:root{
+    --color-bg: hsl(185, 75%, 39%);
+    --color-desaturated:hsl(229, 23%, 23%);
+    --color-grayish: hsl(227, 10%, 46%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--color-bg);
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.pattern-top{
+    width: 350px;
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    z-index: -1;
+}
+.pattern-bottom{
+    width: 350px;
+    position: absolute;
+    right: -10%;
+    bottom: -10%;
+    z-index: -2;
+}
+.container{
+    background: white;
+    max-width: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.card-bg{
+    width: 100%;
+}
+.profile-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.profile{
+    position: absolute;
+    border-radius: 50%;
+    border: white 5px solid;
+    outline: none;
+}
+.text{
+    text-align: center;
+    padding:5rem 0 0 0;
+}
+.text::after{
+    content: "";
+    background: var(--color-grayish);
+    display: block;
+    height: 0.9px;
+    opacity: 0.2;
+}
+.username{
+    color: var(--color-desaturated);
+    font-weight: 700;
+}
+.age{
+    padding-left: 0.3rem;
+    color: var(--color-grayish);
+}
+.location{
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    color: var(--color-grayish);
+}
+.stat{
+    padding: 1.5rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.stat-content{
+    text-align: center;
+}
+.stat-header{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-desaturated);
+    padding-bottom: 0.3rem;
+}
+.stat-para{
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    color: var(--color-grayish);
+}
+.attribution{
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--color-desaturated);
+    position: absolute;
+    bottom: 5px;
+    z-index: -1;
+    min-width: 310px;
+}
+.attribution>a{
+    text-decoration: none;
+    color: var(--color-grayish);
+}
+@media(min-width:1440px){
+    .pattern-top{
+        width: 700px;
+        position: absolute;
+        top: -60%;
+        left: -15%;
+    }
+    .pattern-bottom{
+        width: 700px;
+        position: absolute;
+        top: 60vh;
+        left: 55%;
+    }
+}
