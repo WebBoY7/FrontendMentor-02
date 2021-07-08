@@ -112,7 +112,7 @@ body{
     text-decoration: none;
     color: var(--color-grayish);
 }
-@media(min-width:1440px){
+@media(min-width:850px){
     .pattern-top{
         width: 700px;
         position: absolute;
